@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Grupo Mcx - Econocont Soluções Contábeis. Serviços de contabilidade em Belo Horizonte - MG.">
+    <meta name="keywords" content="contabilidade, contador, escritório contábil, Belo Horizonte, Grupo Mcx, Econocont">
+    <meta name="author" content="Grupo Mcx - Econocont Soluções Contábeis">
+
+    <title>Grupo Mcx | Soluções Contábeis</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0b2d4d;
+            --primary-dark: #061d33;
+            --secondary: #16a085;
+            --secondary-dark: #0f7b67;
+            --light: #f4f8fb;
+            --dark: #172b3a;
+            --text: #5f6f7d;
+            --white: #ffffff;
+        }
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background-color: #fff;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: rgba(6, 29, 51, 0.97);
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: #fff !important;
+            letter-spacing: -0.5px;
+        }
+
+        .navbar-brand span {
+            color: #20c997;
+        }
+
+        .navbar-nav .nav-link {
+            color: rgba(255,255,255,.85) !important;
+            font-size: .92rem;
+            font-weight: 500;
+            margin-left: 18px;
+            transition: .3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #20c997 !important;
+        }
+
+        .btn-nav {
+            background: var(--secondary);
+            color: white !important;
+            padding: 10px 20px !important;
+            border-radius: 8px;
+            margin-left: 20px !important;
+        }
+
+        .btn-nav:hover {
+            background: var(--secondary-dark);
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 720px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(120deg, rgba(6,29,51,.97), rgba(11,45,77,.88)),
+                radial-gradient(circle at 80% 30%, #146c94, transparent 35%);
+            color: white;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: rgba(32,201,151,.08);
+            right: -150px;
+            top: -100px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .badge-custom {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(32,201,151,.15);
+            border: 1px solid rgba(32,201,151,.35);
+            color: #54e0b4;
+            padding: 9px 15px;
+            border-radius: 50px;
+            font-size: .82rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.08;
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #20c997;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(255,255,255,.78);
+            margin-bottom: 35px;
+        }
+
+        .btn-primary-custom {
+            background: var(--secondary);
+            border: none;
+            color: #fff;
+            padding: 14px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-primary-custom:hover {
+            background: var(--secondary-dark);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-custom {
+            border: 1px solid rgba(255,255,255,.35);
+            color: #fff;
+            padding: 14px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-outline-custom:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* SECTION */
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-light {
+            background: var(--light);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title small {
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            font-size: .75rem;
+        }
+
+        .section-title h2 {
+            color: var(--dark);
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        /* SERVICES */
+        .service-card {
+            background: #fff;
+            padding: 35px 28px;
+            border-radius: 14px;
+            height: 100%;
+            border: 1px solid #e8eef2;
+            transition: .3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(11,45,77,.10);
+            border-color: rgba(22,160,133,.25);
+        }
+
+        .service-icon {
+            width: 58px;
+            height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(22,160,133,.1);
+            color: var(--secondary);
+            border-radius: 12px;
+            font-size: 1.6rem;
+            margin-bottom: 23px;
+        }
+
+        .service-card h4 {
+            color: var(--dark);
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            font-size: .92rem;
+            line-height: 1.75;
+            margin-bottom: 0;
+        }
+
+        /* ABOUT */
+        .about-box {
+            background: var(--primary);
+            border-radius: 18px;
+            padding: 50px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-box::before {
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: rgba(32,201,151,.08);
+            border-radius: 50%;
+            right: -80px;
+            bottom: -100px;
+        }
+
+        .about-box h2 {
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .about-box p {
+            color: rgba(255,255,255,.78);
+            line-height: 1.85;
+        }
+
+        .check-list {
+            padding: 0;
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .check-list li {
+            margin-bottom: 14px;
+            color: rgba(255,255,255,.9);
+        }
+
+        .check-list i {
+            color: #20c997;
+            margin-right: 10px;
+        }
+
+        /* STATS */
+        .stats {
+            background: #fff;
+            margin-top: -55px;
+            position: relative;
+            z-index: 5;
+            border-radius: 15px;
+            box-shadow: 0 15px 50px rgba(0,0,0,.08);
+            padding: 35px 20px;
+        }
+
+        .stat {
+            text-align: center;
+            border-right: 1px solid #e8edf0;
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat h3 {
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .stat p {
+            font-size: .82rem;
+            margin: 0;
+        }
+
+        /* DIFFERENTIALS */
+        .feature {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+
+        .feature-icon {
+            flex: 0 0 50px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: #20c997;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 1.3rem;
+        }
+
+        .feature h5 {
+            color: var(--dark);
+            font-weight: 700;
+            margin-bottom: 7px;
+        }
+
+        .feature p {
+            margin: 0;
+            font-size: .9rem;
+            line-height: 1.7;
+        }
+
+        /* COMPANY DATA */
+        .data-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid #e5ebef;
+            height: 100%;
+        }
+
+        .data-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 13px 0;
+            border-bottom: 1px solid #edf1f3;
+            font-size: .88rem;
+        }
+
+        .data-item:last-child {
+            border-bottom: 0;
+        }
+
+        .data-item strong {
+            color: var(--dark);
+        }
+
+        .status {
+            display: inline-block;
+            background: #d1fae5;
+            color: #087f5b;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: .75rem;
+            font-weight: 700;
+        }
+
+        /* PARTNERS */
+        .partner-card {
+            text-align: center;
+            padding: 35px 20px;
+            background: white;
+            border: 1px solid #e5ebef;
+            border-radius: 14px;
+            height: 100%;
+        }
+
+        .partner-icon {
+            width: 65px;
+            height: 65px;
+            background: rgba(11,45,77,.08);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto auto 18px;
+            font-size: 1.5rem;
+        }
+
+        .partner-card h5 {
+            color: var(--dark);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .partner-card span {
+            font-size: .82rem;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 80px 0;
+            background: linear-gradient(120deg, var(--primary-dark), var(--primary));
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .cta p {
+            color: rgba(255,255,255,.75);
+            max-width: 650px;
+            margin: 15px auto 30px;
+            line-height: 1.8;
+        }
+
+        /* CONTACT */
+        .contact-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 14px;
+            border: 1px solid #e7edf1;
+            height: 100%;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(22,160,133,.1);
+            color: var(--secondary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            margin-bottom: 18px;
+        }
+
+        .contact-card h5 {
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .contact-card a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            color: var(--secondary);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #041522;
+            color: rgba(255,255,255,.65);
+            padding: 55px 0 25px;
+        }
+
+        footer h5 {
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        footer p,
+        footer li {
+            font-size: .85rem;
+            line-height: 1.8;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 7px;
+        }
+
+        footer a {
+            color: rgba(255,255,255,.65);
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        footer a:hover {
+            color: #20c997;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.08);
+            margin-top: 35px;
+            padding-top: 22px;
+            font-size: .78rem;
+        }
+
+        /* WHATSAPP */
+        .whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 58px;
+            height: 58px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            box-shadow: 0 8px 25px rgba(37,211,102,.35);
+            z-index: 1000;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .whatsapp:hover {
+            color: white;
+            transform: scale(1.08);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 991px) {
+            .navbar-nav .nav-link {
+                margin-left: 0;
+                padding: 10px 0;
+            }
+
+            .btn-nav {
+                margin-left: 0 !important;
+                display: inline-block;
+                margin-top: 8px;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .stat {
+                border-right: none;
+                border-bottom: 1px solid #e8edf0;
+                padding: 15px;
+            }
+
+            .stat:last-child {
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .section {
+                padding: 65px 0;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .about-box {
+                padding: 30px;
+            }
+
+            .cta h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#inicio">
+            Grupo <span>Mcx</span>
+        </a>
+
+        <button class="navbar-toggler border-0 shadow-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+            <i class="bi bi-list text-white fs-2"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Início</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicos">Serviços</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">Sobre</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#empresa">Empresa</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link btn-nav" href="tel:+553125154745">
+                        <i class="bi bi-telephone me-1"></i>
+                        Fale conosco
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+<section class="hero" id="inicio">
+
+    <div class="container hero-content">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-8">
+
+                <div class="badge-custom">
+                    <i class="bi bi-patch-check-fill"></i>
+                    Soluções Contábeis
+                </div>
+
+                <h1>
+                    Contabilidade que
+                    <span>impulsiona</span>
+                    seu negócio.
+                </h1>
+
+                <p>
+                    Na Grupo Mcx, transformamos números em informações
+                    estratégicas para ajudar empresas a crescerem com
+                    segurança, organização e tranquilidade.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3">
+
+                    <a href="#servicos" class="btn btn-primary-custom">
+                        Conheça nossos serviços
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+
+                    <a href="mailto:gazmirmlfrasheri@gmail.com"
+                       class="btn btn-outline-custom">
+                        <i class="bi bi-envelope me-2"></i>
+                        Entre em contato
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     STATS
+========================= -->
+<div class="container">
+
+    <div class="stats">
+
+        <div class="row">
+
+            <div class="col-lg-3 col-6">
+                <div class="stat">
+                    <h3>2019</h3>
+                    <p>Fundação da empresa</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-6">
+                <div class="stat">
+                    <h3>Ativa</h3>
+                    <p>Situação cadastral</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-6">
+                <div class="stat">
+                    <h3>ME</h3>
+                    <p>Micro Empresa</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-6">
+                <div class="stat">
+                    <h3>MG</h3>
+                    <p>Belo Horizonte</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     SERVIÇOS
+========================= -->
+<section class="section section-light" id="servicos">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>O que fazemos</small>
+
+            <h2>Atividades de Contabilidade</h2>
+
+            <p>
+                Soluções contábeis para apoiar a rotina da sua empresa,
+                mantendo suas informações organizadas e auxiliando
+                na tomada de decisões.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-calculator"></i>
+                    </div>
+
+                    <h4>Contabilidade</h4>
+
+                    <p>
+                        Organização e acompanhamento das informações
+                        contábeis da empresa, proporcionando maior
+                        clareza sobre a situação do negócio.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+
+                    <h4>Gestão Financeira</h4>
+
+                    <p>
+                        Informações organizadas para auxiliar no
+                        acompanhamento financeiro e na gestão
+                        empresarial.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+
+                    <h4>Obrigações Contábeis</h4>
+
+                    <p>
+                        Acompanhamento da documentação e das
+                        obrigações relacionadas às atividades
+                        contábeis da empresa.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+
+                    <h4>Consultoria Empresarial</h4>
+
+                    <p>
+                        Apoio profissional para compreender
+                        informações contábeis e melhorar os processos
+                        administrativos.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-clipboard-data"></i>
+                    </div>
+
+                    <h4>Planejamento</h4>
+
+                    <p>
+                        Organização das informações para apoiar
+                        decisões empresariais com mais segurança
+                        e previsibilidade.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <h4>Segurança e Organização</h4>
+
+                    <p>
+                        Processos organizados e acompanhamento
+                        contábil para que sua empresa tenha mais
+                        tranquilidade em sua rotina.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SOBRE
+========================= -->
+<section class="section" id="sobre">
+
+    <div class="container">
+
+        <div class="about-box">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-7">
+
+                    <small class="text-uppercase text-success fw-bold">
+                        Sobre a Grupo Mcx
+                    </small>
+
+                    <h2 class="mt-2">
+                        Experiência, organização e compromisso.
+                    </h2>
+
+                    <p>
+                        A <strong>Econocont Soluções Contábeis LTDA</strong>,
+                        conhecida pelo nome fantasia <strong>Grupo Mcx</strong>,
+                        é uma empresa localizada em Belo Horizonte, Minas Gerais,
+                        com atividade principal voltada para serviços de
+                        contabilidade.
+                    </p>
+
+                    <p>
+                        Desde 19 de junho de 2019, a empresa atua buscando
+                        oferecer organização e suporte para as necessidades
+                        contábeis de seus clientes.
+                    </p>
+
+                    <ul class="check-list">
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Empresa com situação cadastral ativa
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Atendimento profissional e personalizado
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Soluções voltadas para empresas
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            CRC MG-013824/O
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-5 mt-4 mt-lg-0">
+
+                    <div class="bg-white text-dark rounded-4 p-4">
+
+                        <div class="d-flex align-items-center mb-4">
+
+                            <div class="service-icon mb-0 me-3">
+                                <i class="bi bi-building-check"></i>
+                            </div>
+
+                            <div>
+                                <small class="text-muted">
+                                    Situação cadastral
+                                </small>
+
+                                <h5 class="mb-0 fw-bold">
+                                    Empresa Ativa
+                                </h5>
+                            </div>
+
+                        </div>
+
+                        <hr>
+
+                        <p class="mb-2">
+                            <strong>CNPJ</strong>
+                        </p>
+
+                        <p class="text-muted">
+                            33.979.533/0001-16
+                        </p>
+
+                        <p class="mb-2">
+                            <strong>Atividade principal</strong>
+                        </p>
+
+                        <p class="text-muted mb-0">
+                            69.20-6-01 — Atividades de contabilidade
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DIFERENCIAIS
+========================= -->
+<section class="section section-light">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-5 mb-5 mb-lg-0">
+
+                <div class="section-title text-start mb-0">
+
+                    <small>Nosso propósito</small>
+
+                    <h2>
+                        Mais que números.
+                        Informação para decisões.
+                    </h2>
+
+                    <p class="mx-0">
+                        Uma contabilidade organizada ajuda o empresário
+                        a compreender melhor sua empresa e planejar
+                        seus próximos passos.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-7">
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        <i class="bi bi-person-check"></i>
+                    </div>
+
+                    <div>
+                        <h5>Atendimento próximo</h5>
+
+                        <p>
+                            Comunicação clara e relacionamento próximo
+                            para compreender as necessidades de cada
+                            empresa.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <div>
+                        <h5>Visão empresarial</h5>
+
+                        <p>
+                            Informações contábeis apresentadas de forma
+                            organizada para apoiar a gestão.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        <i class="bi bi-clock-history"></i>
+                    </div>
+
+                    <div>
+                        <h5>Organização</h5>
+
+                        <p>
+                            Processos organizados para facilitar o
+                            acompanhamento das informações da empresa.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="feature mb-0">
+
+                    <div class="feature-icon">
+                        <i class="bi bi-lock"></i>
+                    </div>
+
+                    <div>
+                        <h5>Confiança</h5>
+
+                        <p>
+                            Compromisso com o tratamento responsável
+                            das informações empresariais.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DADOS DA EMPRESA
+========================= -->
+<section class="section" id="empresa">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>Informações empresariais</small>
+
+            <h2>Dados da Empresa</h2>
+
+            <p>
+                Informações cadastrais da Econocont Soluções Contábeis LTDA.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+
+                <div class="data-card">
+
+                    <h5 class="fw-bold text-dark mb-4">
+                        <i class="bi bi-building me-2 text-success"></i>
+                        Informações de Registro
+                    </h5>
+
+                    <div class="data-item">
+                        <span>CNPJ</span>
+                        <strong>33.979.533/0001-16</strong>
+                    </div>
+
+                    <div class="data-item">
+                        <span>Razão Social</span>
+                        <strong>Econocont Soluções Contábeis LTDA</strong>
+                    </div>
+
+                    <div class="data-item">
+                        <span>Nome Fantasia</span>
+                        <strong>Grupo Mcx</strong>
+                    </div>
+
+                    <div class="data-item">
+                        <span>Data de Abertura</span>
+                        <strong>19/06/2019</strong>
+                    </div>
+
+                    <div class="data-item">
+                        <span>Porte</span>
+                        <strong>Micro Empresa</strong>
+                    </div>
+
+                    <div class="data-item">
+                        <span>Natureza Jurídica</span>
+                        <strong>Sociedade Empresária Limitada</strong>
+                    </div>
+
+                    <div class="data-item">
+                        <span>Regime Tributário</span>
+                        <strong>Simples Nacional</strong>
+                    </div>
+
+                    <div class="data-item">
+                        <span>Capital Social</span>
+                        <strong>R$ 99.800,00</strong>
+                    </div>
+
+                    <div class="data-item">
+                        <span>Tipo</span>
+                        <strong>Matriz</strong>
+                    </div>
+
+                    <div class="data-item">
+                        <span>Situação</span>
+                        <span class="status">
+                            <i class="bi bi-check-circle me-1"></i>
+                            ATIVA
+                        </span>
+                    </div>
+
+                    <div class="data-item">
+                        <span>CRC</span>
+                        <strong>MG-013824/O</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="data-card">
+
+                    <h5 class="fw-bold text-dark mb-4">
+                        <i class="bi bi-geo-alt me-2 text-success"></i>
+                        Endereço e Contato
+                    </h5>
+
+                    <div class="data-item">
+                        <span>Endereço</span>
+                        <strong>Rua José Claudio Rezende, 300</strong>
+                    </div>
+
+                    <div class="data-item">
+                        <span>Complemento</span>
+                        <strong>Sala 303</strong>
+                    </div>
+
+                    <div class="data-item">
+                        <span>Bairro</span>
+                        <strong>Estoril</strong>
+                    </div>
+
+                    <div class="data-item">
+                        <span>CEP</span>
+                        <strong>30494-230</strong>
+                    </div>
+
+                    <div class="data-item">
+                        <span>Cidade</span>
+                        <strong>Belo Horizonte - MG</strong>
+                    </div>
+
+                    <div class="data-item">
+                        <span>Telefone</span>
+                        <strong>(31) 2515-4745</strong>
+                    </div>
+
+                    <div class="data-item">
+                        <span>E-mail</span>
+                        <strong class="text-break">
+                            gazmirmlfrasheri@gmail.com
+                        </strong>
+                    </div>
+
+                    <div class="mt-4">
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Jose+Claudio+Rezende+300+Belo+Horizonte+MG"
+                           target="_blank"
+                           class="btn btn-primary-custom w-100">
+
+                            <i class="bi bi-map me-2"></i>
+                            Ver localização no Google Maps
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SÓCIOS
+========================= -->
+<section class="section section-light">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>Estrutura societária</small>
+
+            <h2>Sócios e Administradores</h2>
+
+            <p>
+                Conheça a composição societária informada para a empresa.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-5">
+
+                <div class="partner-card">
+
+                    <div class="partner-icon">
+                        <i class="bi bi-person"></i>
+                    </div>
+
+                    <h5>
+                        Adelaide Maria da Cruz Souza e Silva
+                    </h5>
+
+                    <span>
+                        Sócia
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-5">
+
+                <div class="partner-card">
+
+                    <div class="partner-icon">
+                        <i class="bi bi-person-badge"></i>
+                    </div>
+
+                    <h5>
+                        Marcio de Souza e Silva
+                    </h5>
+
+                    <span>
+                        Sócio-Administrador
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+<section class="cta text-center">
+
+    <div class="container">
+
+        <i class="bi bi-calculator text-success fs-1"></i>
+
+        <h2 class="mt-3">
+            Vamos cuidar da contabilidade da sua empresa?
+        </h2>
+
+        <p>
+            Entre em contato com a Grupo Mcx e conheça nossas
+            soluções contábeis.
+        </p>
+
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+
+            <a href="tel:+553125154745"
+               class="btn btn-primary-custom">
+
+                <i class="bi bi-telephone me-2"></i>
+                (31) 2515-4745
+
+            </a>
+
+            <a href="mailto:gazmirmlfrasheri@gmail.com"
+               class="btn btn-outline-custom">
+
+                <i class="bi bi-envelope me-2"></i>
+                Enviar e-mail
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTATO
+========================= -->
+<section class="section section-light" id="contato">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>Fale conosco</small>
+
+            <h2>Entre em contato</h2>
+
+            <p>
+                Estamos em Belo Horizonte, Minas Gerais.
+                Será um prazer atender você.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="bi bi-telephone"></i>
+                    </div>
+
+                    <h5>Telefone</h5>
+
+                    <a href="tel:+553125154745">
+                        (31) 2515-4745
+                    </a>
+
+                    <p class="mt-2 mb-0 small">
+                        Clique para ligar
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="bi bi-envelope"></i>
+                    </div>
+
+                    <h5>E-mail</h5>
+
+                    <a href="mailto:gazmirmlfrasheri@gmail.com"
+                       class="text-break">
+
+                        gazmirmlfrasheri@gmail.com
+
+                    </a>
+
+                    <p class="mt-2 mb-0 small">
+                        Envie sua mensagem
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+
+                    <h5>Endereço</h5>
+
+                    <p class="mb-0">
+                        Rua José Claudio Rezende, 300<br>
+                        Sala 303 - Estoril<br>
+                        Belo Horizonte - MG<br>
+                        CEP 30494-230
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer>
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+
+                <h5>
+                    Grupo <span class="text-success">Mcx</span>
+                </h5>
+
+                <p>
+                    Econocont Soluções Contábeis LTDA.
+                    Soluções contábeis para empresas que
+                    buscam organização, informação e segurança
+                    para suas decisões.
+                </p>
+
+                <p>
+                    <i class="bi bi-patch-check text-success me-2"></i>
+                    CRC MG-013824/O
+                </p>
+
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <h5>Links</h5>
+
+                <ul>
+
+                    <li>
+                        <a href="#inicio">Início</a>
+                    </li>
+
+                    <li>
+                        <a href="#servicos">Serviços</a>
+                    </li>
+
+                    <li>
+                        <a href="#sobre">Sobre</a>
+                    </li>
+
+                    <li>
+                        <a href="#empresa">Empresa</a>
+                    </li>
+
+                    <li>
+                        <a href="#contato">Contato</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <h5>Informações</h5>
+
+                <ul>
+
+                    <li>
+                        <i class="bi bi-building me-2 text-success"></i>
+                        CNPJ: 33.979.533/0001-16
+                    </li>
+
+                    <li>
+                        <i class="bi bi-geo-alt me-2 text-success"></i>
+                        Belo Horizonte - MG
+                    </li>
+
+                    <li>
+                        <i class="bi bi-envelope me-2 text-success"></i>
+                        gazmirmlfrasheri@gmail.com
+                    </li>
+
+                    <li>
+                        <i class="bi bi-telephone me-2 text-success"></i>
+                        (31) 2515-4745
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom text-center">
+
+            <p class="mb-0">
+                © 2026 Grupo Mcx — Econocont Soluções Contábeis LTDA.
+                Todos os direitos reservados.
+            </p>
+
+            <small>
+                CNPJ 33.979.533/0001-16
+            </small>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/553125154745"
+   target="_blank"
+   class="whatsapp"
+   aria-label="Falar pelo WhatsApp">
+
+    <i class="bi bi-whatsapp"></i>
+
+</a>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
